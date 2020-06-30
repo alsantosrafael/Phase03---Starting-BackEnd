@@ -1,0 +1,437 @@
+
+
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro:400,700&display=swap";
+/* Turning off presets of browsers*/
+
+
+:root{
+
+    --color-green: #50fa7b;
+    --text-color: #f3e5ab;
+    --roxo-rocket: #7159C1;
+}
+
+* {
+    margin:0;
+    padding:0;
+    border:0;
+    text-decoration: none;
+    list-style: none;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    max-width: 1920px;
+
+    margin: 0 auto;
+    background-color: rgba(92, 2, 165, 0.911);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+/*Cabeçalho*/
+
+header {
+    background-color: rgb(69, 9, 109);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 20px;
+    
+
+    border-bottom: 2px solid #f0e3b0;
+    margin-bottom: 64px;
+    
+}
+
+.logo img{
+
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+
+    margin-left: 128px;
+}
+
+.logo img:hover{
+
+    filter: invert(20%);
+    transition: 400ms;
+}    
+.menu {
+    display: flex;
+    flex-direction: row;
+    margin-right: 64px;
+}
+
+.menu li {
+    margin-left: 32px;
+    
+}
+
+.menu li a {
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--text-color);
+    padding: 5px;
+
+}
+
+.menu li a:hover{
+
+    border: 2px solid var(--color-green);
+    border-radius: 8px;
+    color: rgb(76, 76, 240);
+    transition: 200ms;
+
+}
+
+/*Conteúdo da Página Index*/
+
+
+.content {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.foto {
+
+    border-radius: 50%;
+    border: 4px solid var(--color-green);
+    margin-bottom: 32px;
+
+    height: 250px;
+    width: 250px;
+}
+
+.content h1 {
+    color: var(--color-green);
+    font-size: 42px;
+    line-height: 52px;
+    margin-bottom: 20px;
+}
+
+.content h2 {
+    color: var(--text-color);
+    font-size: 28px;
+    line-height: 38px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.content p {
+    color: var(--text-color);
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 5px;
+}
+
+.content ul {
+    margin-top: 20px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.content ul li {
+    list-style-type : none;
+    display : inline;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+/*Página Sobre*/
+
+.about {
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+.about h2 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #00f1a1;
+    font-weight: 700;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255); 
+}
+
+
+
+/*Conteúdo da Página Content*/
+
+.titulo {
+    width: 70%;
+
+    
+    font-size: 24px;
+    line-height: 30px;
+    margin-left: 64px;
+    margin-bottom: 120px;
+    color: #00f1a1;
+    font-weight: 700;
+
+
+}
+/* SECAO DOS CARDS */
+
+.cards {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    
+    width: 1300px;
+    margin: 0 auto;
+    gap: 60px;
+}
+
+.card {
+    background-color: rgba(73, 69, 69, 0.377);
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    align-items: center;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+
+    cursor: pointer;
+
+}
+
+.purple {
+    
+    height: 20px;
+    width: 20px;
+    
+    border: 3px solid var(--roxo-rocket);
+    border-radius: 50%;
+    padding: 20px;
+    margin-top: 32px;
+    margin-bottom: 120px;
+
+
+}
+
+.orange {
+    
+    height: 20px;
+    width: 20px;
+    
+    border: 3px solid #FD951F;
+    border-radius: 50%;
+    padding: 20px;
+    margin-top: 32px;
+    margin-bottom: 120px;
+}
+
+.green {
+    
+    height: 20px;
+    width: 20px;
+    
+    border: 3px solid #04D361;
+    border-radius: 50%;
+    padding: 20px;
+    margin-top: 32px;
+    margin-bottom: 120px;
+}
+
+
+.card img {
+
+    margin-bottom: 30px;
+}
+
+#starter:hover {
+
+    border: 4px solid var(--roxo-rocket);
+    transition: 400ms;
+
+}
+
+#launchbase:hover {
+
+    border: 4px solid #FD951F;
+    transition: 400ms;
+
+}
+
+#gostack:hover {
+
+    border: 4px solid #04D361;
+    transition: 400ms;
+
+}
+
+.head1 {
+    color: var(--roxo-rocket);;
+}
+
+.head2 {
+    color: #FD951F;
+}
+
+.head3 {
+    color: #04D361;
+}
+
+
+.card-tag {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    color: greenyellow;
+}
+
+
+
+/*Rodapé*/
+
+.footer {
+
+    margin-top: 32px;
+    padding: 28px;
+
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.footer ul li {
+
+
+    margin-left: 56px;
+}
+
+.footer ul li a {
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 28px;
+    
+    border-bottom: 2px solid;
+}
+
+.footer ul li a:hover {
+
+    color: var(--color-green);
+    transition: 400ms;
+} 
+
+
+
+/* ---- Modal ---- */
+
+/*Construindo agora uma tela transparente que fica sobreposta a tela anterior*/
+/*A ideia aqui é ao clicar em um dos meus cards, eu escureco a parte do fundo com meu modal-overlay*/
+/* abro uma pequena tela branca*/
+.modal-overlay {
+
+    background-color: rgba(0, 0, 0, 0.7);/*Tela escura mas com transparência*/
+    width: 100%; /*Ocupa toda a tela em largura*/
+    height: 100%;/*Ocupa toda a tela em altura*/
+    position: fixed;/*Preciso fixar a posicao se nao ele nao vai*/
+    top: 0;/*Coloco ele lá em cima da tela*/
+
+    /*Configuracoes para ele so aparecer quando a classe for inserida*/
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+/* Agora eu to construindo o modal de fato*/
+.modal {
+
+    background-color: rgb(255, 255, 255);/*Tela branca*/
+    width: 90%;/*Nao vou ocupar a tela inteira em largura*/
+    height: 90%;/*Nao vou ocupar a tela inteira em altura*/
+    margin: 5vh auto;/*Centralizando e com 5vh da visao horizontal*/
+    position: relative; /*Isso aqui é para configuracao futura dos filhos*/
+
+}
+
+.modal .close-modal {
+
+    color: black;
+    /*O botao vai aparecer do lado esquerdo no canto superior. Se eu quiser movimentá-lo:*/
+    position: absolute; /*Agora tenho liberdade para colocar o botao em qualquer lugar*/
+    right: 8px; /*Coloquei meu X 8px da direita para a esquerda*/
+    top: 8px; /*Coloquei meu X 8px da cima para baixo*/
+    cursor: pointer;/*Coloco a maozinha no icone. Se eu tivesse mantido meu href, a mao apareceria automaticamente*/
+}
+
+/* CONFIGURANDO MODAL ATIVO */
+/*Configurando o icone para fechar o modal*/
+
+
+.modal-overlay.active {
+
+    opacity: 1;
+    visibility: visible;
+    text-align: center;
+
+
+}
+
+iframe {
+    display: flex;
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    margin: 0 auto;
+    
+}
+
+
+/* Página error 404 */
+
+.error {
+    
+    margin-top: 240px;
+    text-align: center;
+    margin-bottom: 240px;
+}
+
+.error-message h1 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+
+}
+
+.error-message h2 {
+    display: inline;
+    color: var(--text-color);
+    
+
+    border-bottom: 2px solid antiquewhite;
+
+
+}
+
+.error-message p {
+    margin-top: 20px;
+    color: var(--text-color);
+
+}

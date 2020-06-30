@@ -1,0 +1,99 @@
+Passo a Passo para o backend
+
+1) Criar na pasta(normalmente vazia) de onde ficará projeto um arquivo com nome server.js.
+2) Abrir nosso terminal e executar "npm init -y" para instalar as dependências utilizadas pelo server (Criamos aqui um package.json)
+3) Após isso, no json, podemos alterar a parte do start.
+4) Baixa deixar isso: 
+{
+  "name": "starting_backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
+5) Instalar o express com "npm install express"
+6) Abrir nosso server.js e começar o servidor
+7) No server.js inserir:
+	const express = require('express') // Criamos variável para chamar express
+	const server = express()// criamos uma variavel para executar o express
+	
+	server.listen(5000, function (){
+		console.log("Server is running")
+
+	})
+
+8) Vamos agora criar as rotas para as páginas do nosso site
+
+	const express = require('express') // Criamos variável para chamar express
+	const server = express()// criamos uma variavel para executar o express
+	
+	server.get("/", function (){
+		return res.render("index")
+
+	})
+	
+	
+	server.listen(5000, function (){ //Liberando uma porta para a gente, quando ela for liberada imprime a mensagem abaixo
+		console.log("Server is running")
+
+	})
+
+9) Para não ficar toda hora tendo que desligar e ligar o servidor, instalamos o nodemon no terminal "npm install -D nodemon"
+
+10) Abrir package.json e alterar "start": "node server.js" para "start": "nodemon server.js"
+
+11) Agora precisamos trazer os arquivos do projeto para a pasta do servidor. Basta abrir com o VSCode e salvar nas pasta
+12)Instalar o nunjucks  "npm install nunjucks", configurar a view engine e configurar o nunjucks
+
+const express = require('express') // Criamos variável para chamar express
+const nunjucks = require('nunjucks')
+
+const server = express()// criamos uma variavel para executar o express
+
+server.set("view engine", "html") //escolhendo minha view engine, por enquanto vamos usar o html apenas
+
+nunjucks.configure("views", { //configurando o nunjucks, primeiro colocamos a pasta views, onde está o documento, e a opção express:server
+    express: server
+})
+
+server.get("/", function(req, res){
+    return res.render("index")//Renderizando minha pagina
+})
+
+server.listen(5000, function (){
+    console.log("Server is running")
+
+})
+
+13)Agora precisamos inserir nosso css para tanto inserimos server.use(express.static('public')) onde public é a pasta
+onde o servidor vai buscar o css.
+
+const express = require('express')
+const nunjucks = require('nunjucks')
+
+const server = express()
+
+server.use(express.static('public')) //Localizando nosso css e usando-o
+
+server.set("view engine", "html")
+
+nunjucks.configure("views", {
+    express: server
+})
+
+server.get("/", function(req, res){
+    return res.render("index")
+})
+
+
+server.listen(5000, function (){
+    console.log("Server is running")
+
+})
+
+14) Precisamos fazer agora alterações nos nossos arquivos html em termos de endereço. Onde index.html foi chamado, precisamos chamar
+a /! Todos os href vão receber a / e o respectivo nome da página. Ex.: /portfolio, /styles.css, /about
+
+15) Lembrar de criar rotas para todas as páginas adicionadas!!
+16) Criadas as rotas, agora é hora de tornar nossas páginas dinâmicas utilizando as templates engines do nunjucks. 
