@@ -43,7 +43,7 @@ header {
     
 
     border-bottom: 2px solid #f0e3b0;
-    margin-bottom: 64px;
+    margin-bottom: 100px;
     
 }
 
@@ -175,12 +175,12 @@ header {
 /*Conteúdo da Página Content*/
 
 .titulo {
-    width: 70%;
+    
 
     
     font-size: 24px;
     line-height: 30px;
-    margin-left: 64px;
+    margin-left: 290px;
     margin-bottom: 120px;
     color: #00f1a1;
     font-weight: 700;
@@ -194,18 +194,19 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
+    align-items: center;
     
     width: 1300px;
     margin: 0 auto;
-    gap: 60px;
+    gap: 65px;
 }
 
 .card {
-    background-color: rgba(73, 69, 69, 0.377);
+    background-color: rgba(73, 69, 69, 0.836);
     display: flex;
     flex-direction: column;
     width: 400px;
-    height: 600px;
+    height: 700px;
     align-items: center;
     border-radius: 8px;
     align-items: center;
@@ -225,7 +226,8 @@ header {
     padding: 20px;
     margin-top: 32px;
     margin-bottom: 120px;
-
+    font-size: 18px;
+    line-height: 22px;
 
 }
 
@@ -239,6 +241,8 @@ header {
     padding: 20px;
     margin-top: 32px;
     margin-bottom: 120px;
+    font-size: 18px;
+    line-height: 22px;
 }
 
 .green {
@@ -251,12 +255,20 @@ header {
     padding: 20px;
     margin-top: 32px;
     margin-bottom: 120px;
+    font-size: 18px;
+    line-height: 22px;
 }
 
 
 .card img {
-
+    width: 250px;
+    height: 250px;
     margin-bottom: 30px;
+}
+
+.card-info {
+    font-size: 20px;
+    line-height: 24px;
 }
 
 #starter:hover {
@@ -282,14 +294,20 @@ header {
 
 .head1 {
     color: var(--roxo-rocket);;
+    font-size: 20px;
+    line-height: 26px;
 }
 
 .head2 {
     color: #FD951F;
+    font-size: 20px;
+    line-height: 26px;
 }
 
 .head3 {
     color: #04D361;
+    font-size: 20px;
+    line-height: 26px;
 }
 
 
@@ -297,6 +315,7 @@ header {
     width: 80%;
     display: flex;
     justify-content: space-between;
+    font-size: 20px;
     margin-top: 32px;
     color: greenyellow;
 }

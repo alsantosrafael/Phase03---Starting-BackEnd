@@ -1,6 +1,5 @@
 
-{% extends "layout.html" %}
-
+{% extends "layout.njk" %}
 
 
 {% block head %}
@@ -14,68 +13,28 @@
     <div class="titulo">
         <h1>Conteúdos</h1>
     </div>   
+
     <section class="cards">
+        {% for item in items %} <!--Estrutura de repetição para pegar todos os objetos-->
 
-        <div class="card" id="starter">
-            
-            <span class="purple">01</span>
+            <div class="card" id="{{item.id}}">
                 
-            <div class="card-img">
-                <img src="assets/Starter.64c237cc.svg" alt="logo starter">
-            </div>
-            
-            <div class="card-info">
-                <p class="head1"><strong head1>Torne-se um programador desejado</strong></p>
-                <p>no mercado com esses cursos <br> gratuitos</p>
-            </div>
-            <div class="card-tag">
-                <p>Free</p>
-                <p>05 Módulos</p>
-            </div>
-            
-        </div>
-
-        <div class="card" id="launchbase">
-            
-            <span class="orange">02</span>
+                <span class="{{item.class}}">{{item.level}}</span>
+                    
+                <div class="card-img">
+                    <img src="{{item.img_url}}" alt="logo do {{item.id}}">
+                </div>
                 
-            <div class="card-img">
-                <img src="assets/LaunchBase.08285320.svg" alt="logo launchbase">
-            </div>
-            
-            <div class="card-info">
-                <p><strong class="head2">Domine a programação do zero</strong> e</p>
-                <p>tenha acesso às melhores <br>oportunidades do mercado<br>
-            </div>
-            <div class="card-tag">
-                <p>Premium</p>
-                <p>18 Módulos</p>
-            </div>
-            
-        </div>
-
-        
-        <div class="card" id="gostack">
-            
-            <span class="green">03</span>
+                <div class="card-info">
+                    <p>{{item.cardinfo}}</p>
+                </div>
+                <div class="card-tag">
+                    <p>{{item.price}}</p>
+                    <p>{{item.modules}}</p>
+                </div>
                 
-            <div class="card-img">
-                <img src="assets/GoStack.83a178a0.svg" alt="logo gostack">
             </div>
-            
-            <div class="card-info">
-                <p><strong class="head3">Treinamento imersivo</strong> nas</p>
-                <p>tecnologias mais modernas de</p>
-                <p>desenvolvimento web e mobile</p>
-            </div>
-            <div class="card-tag">
-                <p>Premium</p>
-                <p>18 Módulos</p>
-            </div>
-            
-        </div>  
-
-
+        {% endfor %}
     </section>
 
     <div class="modal-overlay">
