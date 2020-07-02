@@ -15,7 +15,23 @@ nunjucks.configure("views", {
 })
 
 server.get("/", function(req, res){
-    return res.render("index")
+    //Transferindo dados da minha página inicial do frontend para o backend
+    const data = {
+        avatar_url:"https://bityli.com/X0UhH",
+        title: "Rocketseat",
+        subtitle: "A menor distância entre você e seus objetivos!",
+        moto: "Somos especializados em cursos de programação e nosso método está fundamentado nos pilares: <strong>Foco</strong>, <strong>Prática</strong> e <strong>Grupo</strong>",
+        techs: "<ul> As principais tecnologias abordadas: <li> Javascript, </li> <li> CSS, </li> <li> HTML, </li> <li> React, </li> <li> React Native. </li> </ul>",
+        links: [
+            { name: "Instagram", url: "https://www.instagram.com/rocketseat_oficial/?hl=pt-br"},
+            { name: "Facebook", url: "https://www.facebook.com/rocketseat/"},
+            { name: "Github", url: "https://github.com/Rocketseat"}
+            
+        ]
+    
+    }
+
+    return res.render("index", { data : data }) //enviando index e variavel que criei com objeto
 
 })
 

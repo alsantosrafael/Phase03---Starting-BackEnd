@@ -35,9 +35,10 @@
 
     <footer class="footer">
         <ul>
-            <li><a href="https://www.instagram.com/rocketseat_oficial/?hl=pt-br" target="_blank">Instagram</a></li>
-            <li><a href="https://www.facebook.com/rocketseat/" target="_blank">Facebook</a></li>
-            <li><a href="https://github.com/Rocketseat" target="_blank">Github</a></li>
+            {% for link in data.links%}
+            
+                    <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
+            {% endfor %}
         </ul>
     </footer>
 
